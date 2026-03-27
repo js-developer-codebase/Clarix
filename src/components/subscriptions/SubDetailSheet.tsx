@@ -103,7 +103,7 @@ export function SubDetailSheet({
             <div className="bg-zinc-900/40 rounded-lg p-4 border border-zinc-800/50">
               <p className="text-[10px] uppercase font-bold text-zinc-600 mb-2">Audit Notes</p>
               <p className="text-xs text-zinc-400 leading-relaxed italic">
-                "{sub.notes}"
+                &quot;{sub.notes}&quot;
               </p>
             </div>
           )}
