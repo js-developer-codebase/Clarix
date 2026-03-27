@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Clarix SaaS - Enterprise Subscription Intelligence
 
-## Getting Started
+Clarix is a high-performance SaaS platform built for multi-tenant subscription monitoring and cost optimization. It provides granular visibility into software spend across an entire organization.
 
-First, run the development server:
+## 🚀 Technology Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Database**: [MongoDB](https://www.mongodb.com/) (Native Driver)
+- **Auth**: [Next-Auth (Auth.js) v5](https://authjs.dev/)
+- **UI**: [Radix UI](https://www.radix-ui.com/) + [Tailwind CSS](https://tailwindcss.com/)
+- **Validation**: [Zod](https://zod.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗 Architecture Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The system uses a **Native MongoDB driver** approach for maximum performance and flexible schema management, bypassing the overhead of traditional ORMs. It features a robust multi-tenant architecture with strict role-based access control (RBAC).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Key Modules:
+- **Super Admin Dashboard**: Global tenant management, platform-wide analytics, and infrastructure governance.
+- **Company Admin Dashboard**: User seat management, department spend tracking, and license optimization.
+- **Renewal Alert Engine**: Automated cron jobs for monitoring upcoming software renewals and cost spikes.
 
-## Learn More
+## 🛠 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
+   ```bash
+   git clone <repo-url>
+   cd clarix
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Configure environment**:
+   Copy `.env.example` to `.env` and provide your MongoDB connection string.
 
-## Deploy on Vercel
+4. **Seed the database**:
+   ```bash
+   npm run seed
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Start development**:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🔐 Credentials (Default Seed)
+
+- **Super Admin**: `admin@clarix.in` / `Admin@1234`
+- **Standard Admin**: `aman@infospark.in` / `Aman@1234`
+
+## 📄 License
+
+Proprietary License - (c) 2026 Clarix SaaS. All Rights Reserved.
